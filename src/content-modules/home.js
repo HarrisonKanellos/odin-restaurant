@@ -1,3 +1,9 @@
+import thaliSetImage from "../assets/thali-set.png";
+import khajaSetImage from "../assets/khaja-set.jpg";
+import momoImage from "../assets/momo.jpeg";
+import jerryImage from "../assets/jerry.jpeg";
+import sekuwaImage from "../assets/sekuwa.jpg";
+
 export function renderHomeContent() {
     const contentContainer = document.querySelector("#content");
 
@@ -34,7 +40,7 @@ function createExperienceSection() {
 
     const image = document.createElement("img");
     image.alt = "Thali Set";
-    image.src = "src/assets/thali-set.png";
+    image.src = thaliSetImage;
 
     leftContainer.appendChild(sectionHeading);
     leftContainer.appendChild(viewMenuBtn);
@@ -75,11 +81,11 @@ function createDescriptionSection() {
 
     const imageOne = document.createElement("img");
     imageOne.alt = "Khaja Set";
-    imageOne.src = "src/assets/khaja-set.jpg";
+    imageOne.src = khajaSetImage;
 
     const imageTwo = document.createElement("img");
     imageTwo.alt = "Momo";
-    imageTwo.src = "src/assets/momo.jpeg";
+    imageTwo.src = momoImage;
 
     leftContainer.appendChild(imageOne);
     leftContainer.appendChild(imageTwo);
@@ -116,11 +122,11 @@ function createEatSection() {
 
     const imageOne = document.createElement("img");
     imageOne.alt = "Jerry";
-    imageOne.src = "src/assets/jerry.jpeg";
+    imageOne.src = jerryImage;
 
     const imageTwo = document.createElement("img");
     imageTwo.alt = "Sekuwa";
-    imageTwo.src = "src/assets/sekuwa.jpg";
+    imageTwo.src = sekuwaImage;
 
     leftContainer.appendChild(sectionHeading);
     leftContainer.appendChild(makeBookingBtn);
