@@ -5,5 +5,44 @@
 }
 
 body {
-    background-color: azure;
+    background-color: lightgrey;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 20px;
+}
+
+/* Header and NAV */
+header {
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: -1px;
+}
+
+.page-heading-container {
+    margin-left: 25px;
+    padding: 25px;
+}
+
+h1 {
+    font-size: 3rem;
+    font-style: italic;
+}
+
+nav {
+    margin-right: 25px;
+    display: flex;
+}
+
+.nav-item {
+    font-size: 2rem;
+    background-color: transparent;
+    border: none;
+    padding: 25px 25px;
+}
+
+.nav-item:hover,
+.nav-item:active {
+    background-color: grey;
+    color: whitesmoke;
 }
