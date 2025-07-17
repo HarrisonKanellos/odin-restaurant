@@ -8,6 +8,7 @@ export function renderHomeContent() {
     const contentContainer = document.querySelector("#content");
 
     const homeContentContainer = document.createElement("div");
+    homeContentContainer.classList.add("home-content-container");
 
     const experienceSection = createExperienceSection();
     const descriptionSection = createDescriptionSection();
@@ -22,6 +23,7 @@ export function renderHomeContent() {
 
 function createExperienceSection() {
     const experienceSection = document.createElement("section");
+    experienceSection.classList.add("experience-section");
 
     const leftContainer = document.createElement("div");
     leftContainer.classList.add("left-container");
@@ -41,6 +43,7 @@ function createExperienceSection() {
     const image = document.createElement("img");
     image.alt = "Thali Set";
     image.src = thaliSetImage;
+    image.classList.add("experience-image");
 
     leftContainer.appendChild(sectionHeading);
     leftContainer.appendChild(viewMenuBtn);
@@ -55,6 +58,7 @@ function createExperienceSection() {
 
 function createDescriptionSection() {
     const descriptionSection = document.createElement("section");
+    descriptionSection.classList.add("description-section");
 
     const leftContainer = document.createElement("div");
     leftContainer.classList.add("left-container");
@@ -104,6 +108,7 @@ function createDescriptionSection() {
 
 function createEatSection() {
     const eatSection = document.createElement("section");
+    eatSection.classList.add("eat-section");
 
     const leftContainer = document.createElement("div");
     leftContainer.classList.add("left-container");

@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: lightgrey;
+    background-color: rgb(241, 241, 241);
     font-family: Helvetica, Arial, sans-serif;
     font-size: 20px;
 }
@@ -13,6 +13,7 @@ body {
 /* Header and NAV */
 header {
     background-color: whitesmoke;
+    border-bottom: 2px solid black;
     display: flex;
     justify-content: space-between;
     position: sticky;
@@ -45,4 +46,95 @@ nav {
 .nav-item:active {
     background-color: grey;
     color: whitesmoke;
+    cursor: pointer;
+}
+
+/* Home Module */
+.home-content-container {
+    padding: 0 18vw;
+}
+
+section {
+    padding: 100px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+}
+
+section:not(.eat-section) {
+    border-bottom: 7px dashed rgb(31, 31, 31);
+}
+
+.section-heading {
+    font-size: 2.5rem;
+}
+
+.home-content-container button {
+    background-color: black;
+    color: whitesmoke;
+    font-size: 1.3rem;
+    font-weight: bold;
+    border: none;
+    padding: 20px 35px;
+}
+
+.home-content-container button:hover,
+.home-content-container button:active {
+    color: darkseagreen;
+    cursor: pointer;
+}
+
+img {
+    width: 350px;
+}
+
+.experience-section .left-container,
+.description-section .right-container,
+.eat-section .left-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 150px;
+}
+
+.experience-section {
+    padding-top: 200px;
+}
+
+.experience-section img {
+    width: 500px;
+}
+
+.description-section .left-container,
+.eat-section .right-container {
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.description-section img:last-child {
+    align-self: end;
+}
+
+.button-container {
+    display: flex;
+    gap: 25px;
+}
+
+.button-container .order-button {
+    background-color: whitesmoke;
+    color: black;
+    border: 2px solid black;
+}
+
+.button-container .order-button:hover,
+.button-container .order-button:active {
+    color: darkseagreen;
+    border: 2px solid darkseagreen;
+}
+
+.eat-section img:first-child {
+    align-self: end;
 }
