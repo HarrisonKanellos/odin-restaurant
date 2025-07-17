@@ -3,6 +3,8 @@ import { renderHomeContent } from "./content-modules/home";
 import { renderMenuContent } from "./content-modules/menu";
 import { renderContactContent } from "./content-modules/contact-us";
 
+const homeTab = document.querySelector("#home");
+homeTab.classList.add("selected-tab");
 renderHomeContent();
 
 const nav = document.querySelector("nav");
