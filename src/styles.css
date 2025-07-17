@@ -49,6 +49,11 @@ nav {
     cursor: pointer;
 }
 
+.selected-tab {
+    background-color: black;
+    color: whitesmoke;
+}
+
 /* Footer */
 footer {
     color: whitesmoke;

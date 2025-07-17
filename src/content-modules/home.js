@@ -43,7 +43,6 @@ function createExperienceSection() {
     const image = document.createElement("img");
     image.alt = "Thali Set";
     image.src = thaliSetImage;
-    image.classList.add("experience-image");
 
     leftContainer.appendChild(sectionHeading);
     leftContainer.appendChild(viewMenuBtn);

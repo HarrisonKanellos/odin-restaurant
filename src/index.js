@@ -9,8 +9,11 @@ const nav = document.querySelector("nav");
 nav.addEventListener(("click"), handleNavClick);
 
 function handleNavClick(e) {
-    const id = e.target.id;
+    removePreviousSelect();
 
+    e.target.classList.add("selected-tab");
+
+    const id = e.target.id;
     switch (id) {
         case "home":
             clearContent();
@@ -31,5 +34,12 @@ function clearContent() {
     const child = contentContainer.querySelector(":first-child");
     if (child !== null) {
         contentContainer.removeChild(child);
+    }
+}
+
+function removePreviousSelect() {
+    const previousTab = document.querySelector(".selected-tab");
+    if (previousTab) {
+        previousTab.classList.remove("selected-tab");
     }
 }
