@@ -197,11 +197,11 @@ img {
 .entree-container,
 .main-container {
     border-bottom: 2px solid black;
-    padding: 30px 0;
+    padding: 50px 0;
 }
 
 .desert-container {
-    padding-top: 30px;
+    padding-top: 50px;
 }
 
 .item-container {
@@ -217,4 +217,121 @@ img {
 
 .item-price {
     margin-left: auto;
+}
+
+/* Contact Us Content */
+.contact-container {
+    padding: 100px 350px 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.touch-container,
+.message-conatiner {
+    display: flex;
+    flex-direction: column;
+}
+
+.touch-heading,
+.message-heading {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.touch-description,
+.email {
+    margin-bottom: 40px;
+}
+
+.email-address,
+.phone-number {
+    font-style: italic;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 24px 50px) 24px 120px 75px;
+    row-gap: 15px;
+    column-gap: 50px;
+}
+
+input,
+textarea {
+    padding: 10px;
+    font-size: 1.1rem;
+    outline: none;
+}
+
+input {
+    size: 15;
+    border: none;
+}
+
+textarea {
+    border: none;
+}
+
+input:focus,
+textarea:focus {
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+label[for="first-name"] {
+    grid-area: 1 / 1;
+}
+
+label[for="last-name"] {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+#first-name {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+#last-name {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+label[for="email"] {
+    grid-area: 3 / 1 / 4 / 3;
+}
+
+#email {
+    grid-area: 4 / 1 / 5 / 3;
+}
+
+label[for="mobile"] {
+    grid-area: 5 / 1 / 6 / 3;
+}
+
+#mobile {
+    grid-area: 6 / 1 / 7 / 3;
+}
+
+label[for="message"] {
+    grid-area: 7 / 1 / 8 / 3;
+}
+
+#message {
+    grid-area: 8 / 1 / 9 / 3;
+}
+
+button[type="submit"] {
+    color: black;
+    font-size: 1.4rem;
+    font-weight: bold;
+    background-color: darkseagreen;
+    border: none;
+    margin-top: 30px;
+    grid-column: 1 / 3;
+    height: 75px;
+    width: 300px;
+}
+
+button[type="submit"]:hover,
+button[type="submit"]:active {
+    background-color: pink;
+    cursor: pointer;
 }

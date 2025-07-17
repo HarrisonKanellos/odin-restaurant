@@ -2,6 +2,7 @@ export function renderContactContent() {
     const contentContainer = document.querySelector("#content");
 
     const contactContainer = document.createElement("div");
+    contactContainer.classList.add("contact-container");
     
     const touchSection = createTouchSection();
     const messageSection = createMessageSection();
@@ -17,7 +18,7 @@ function createTouchSection() {
     leftContainer.classList.add("touch-container");
 
     const touchHeading = document.createElement("h2");
-    touchHeading.classList.add("section-heading,touch-heading");
+    touchHeading.classList.add("section-heading", "touch-heading");
     touchHeading.textContent = "GET IN TOUCH";
 
     const touchDescription = document.createElement("p");
@@ -57,13 +58,13 @@ function createMessageSection() {
     rightContainer.classList.add("message-container");
 
     const messageHeading = document.createElement("h2");
-    messageHeading.classList.add("section-heading,message-heading");
+    messageHeading.classList.add("section-heading", "message-heading");
     messageHeading.textContent = "SEND US A MESSAGE";
 
     const form = document.createElement("form");
 
     const firstNameLabel = document.createElement("label");
-    firstNameLabel.for = "first-name";
+    firstNameLabel.htmlFor = "first-name";
     firstNameLabel.textContent = "Firstname *";
 
     const firstNameInput = document.createElement("input");
@@ -73,7 +74,7 @@ function createMessageSection() {
     firstNameInput.required = true;
 
     const lastNameLabel = document.createElement("label");
-    lastNameLabel.for = "last-name";
+    lastNameLabel.htmlFor = "last-name";
     lastNameLabel.textContent = "Lastname *";
 
     const lastNameInput = document.createElement("input");
@@ -83,7 +84,7 @@ function createMessageSection() {
     lastNameInput.required = true;
 
     const emailLabel = document.createElement("label");
-    emailLabel.for = "email";
+    emailLabel.htmlFor = "email";
     emailLabel.textContent = "Email *"
     
     const emailInput = document.createElement("input");
@@ -93,7 +94,7 @@ function createMessageSection() {
     emailInput.required = true;
 
     const mobileLabel = document.createElement("label");
-    mobileLabel.for = "mobile";
+    mobileLabel.htmlFor = "mobile";
     mobileLabel.textContent = "Mobile *";
 
     const mobileInput = document.createElement("input");
@@ -103,19 +104,20 @@ function createMessageSection() {
     mobileInput.required = true;
 
     const messageLabel = document.createElement("label");
-    messageLabel.for = "message";
+    messageLabel.htmlFor = "message";
     messageLabel.textContent = "Message *";
 
     const messageInput = document.createElement("textarea");
     messageInput.name = "message";
     messageInput.id = "message";
-    messageInput.rows = "7";
-    messageInput.cols = "50";
+    messageInput.rows = "5";
+    messageInput.cols = "10";
     messageInput.required = true;
 
     const submitButton = document.createElement("button");
     submitButton.type = "submit";
-    submitButton.value = "SUBMIT";
+    submitButton.value = "submit";
+    submitButton.textContent = "SUBMIT";
 
     form.appendChild(firstNameLabel);
     form.appendChild(firstNameInput);
