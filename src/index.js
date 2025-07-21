@@ -6,6 +6,7 @@ import { renderContactContent } from "./content-modules/contact-us";
 const homeTab = document.querySelector("#home");
 homeTab.classList.add("selected-tab");
 renderHomeContent();
+addMenuBtnEvent();
 
 const nav = document.querySelector("nav");
 nav.addEventListener(("click"), handleNavClick);
@@ -20,6 +21,7 @@ function handleNavClick(e) {
         case "home":
             clearContent();
             renderHomeContent();
+            addMenuBtnEvent();
             break;
         case "menu":
             clearContent();
@@ -45,3 +47,18 @@ function removePreviousSelect() {
         previousTab.classList.remove("selected-tab");
     }
 }
+
+function addMenuBtnEvent() {
+    const viewMenuBtn = document.querySelector(".view-menu-button");
+    viewMenuBtn.addEventListener("click", handleViewMenuClick);
+}
+
+function handleViewMenuClick() {
+    removePreviousSelect();
+
+    const menuTab = document.querySelector("#menu");
+    menuTab.classList.add("selected-tab");
+
+    clearContent();
+    renderMenuContent();
+} 
